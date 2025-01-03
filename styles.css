@@ -388,5 +388,42 @@ body {
     
     .zutabea {
         min-width: 48%;
+        padding: 8px;
+    }
+
+    .hitz-botoia {
+        width: 140px;
+        margin: 4px auto;
+        padding: 8px;
+        font-size: 0.8em;
+    }
+
+    .titulua {
+        font-size: 1em;
+    }
+
+    .azpititulua {
+        font-size: 0.5em;
+    }
+
+    #erlojua {
+        font-size: 1.5em;
+    }
+
+    #uneko-puntuak {
+        font-size: 1.5em;
+    }
+
+    #egiaztatu-botoia {
+        padding: 12px 30px;
+        font-size: 0.7em;
+    }
+}
+
+/* Media query adicional para pantallas muy pequeñas */
+@media screen and (max-width: 360px) {
+    .hitz-botoia {
+        width: 120px;
+        font-size: 0.7em;
     }
 } 
