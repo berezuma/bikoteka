@@ -141,7 +141,7 @@ body {
 
 .joko-eremua {
     display: flex;
-    flex-direction: row !important;
+    flex-direction: row;
     justify-content: space-between;
     gap: 10px;
     width: 100%;
@@ -371,12 +371,13 @@ body {
 /* Añade media queries para dispositivos móviles */
 @media screen and (max-width: 768px) {
     .joko-eremua {
-        padding: 0 10px;
+        display: flex;
+        flex-wrap: nowrap;
         gap: 10px;
     }
     
     .zutabea {
-        min-width: 48%;
+        flex: 0 1 48%;
         padding: 8px;
     }
 
@@ -411,6 +412,15 @@ body {
 
 /* Media query adicional para pantallas muy pequeñas */
 @media screen and (max-width: 360px) {
+    .joko-eremua {
+        gap: 5px;
+    }
+    
+    .zutabea {
+        flex: 0 1 49%;
+        padding: 4px;
+    }
+
     .hitz-botoia {
         width: 120px;
         font-size: 0.7em;
