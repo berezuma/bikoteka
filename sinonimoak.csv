@@ -15,7 +15,7 @@ AIDURU,ain itxaroten esperoan
 AITABITXIA,ita besoetako
 AITZAKIA,estakuru
 AITZINEKOA,aurrekoa aurretikoa arteragokoa
-AITZINSOLASEAN            S,arreran hitzaurrean atarikoan
+AITZINSOLASEAN,Sarreran hitzaurrean atarikoan
 AKASO,beharbada apika agian ausaz
 AKATSAK,hutsak hutsegiteak erruak
 AKITUTA,nekatuta indargetuta unatuta
@@ -160,7 +160,7 @@ ESTAKURU,aitzakia
 ESTREINAKOZ,lehenengoz aurrenekoz lehendabizikoz lehenbizi lehenik
 ESTUTASUNA,ezinegona larritasuna egonezina
 ETEKINA,irabazia mozkina hobaria
-ETSI,amore eman errenditu atzera egin
+ETSI,errenditu
 ETXOLA,borda txabola
 EZAGUTU,aitortu eskertu
 EZBAIAN,dudan zalantzan dudamuda dudatan enuraz
@@ -197,7 +197,7 @@ GORRIAN,beltzean gogorrean
 HAGITZ,oso txit arras guztiz erabat
 HALA ERE,halere hala eta guztiz ere nolanahi ere aldiz baina ostera
 HALABEHARRAK,zoriak patuak zorteak
-HALABER,baita ere era berean orobat modu berean orobat berebat horretaz gainera are gehiago gainera
+HALABER,baita_ere era_berean orobat modu berean orobat berebat horretaz gainera are_gehiago gainera
 HALAMODUZKOA,erdipurdikoa kaxkarra eskasa halaholakoa
 HARRABOTSA,astrapala zalaparta zarata azantza
 HAUSNARKETA,gogoeta azterketa pentsaketa oldozketa gogarte
@@ -265,7 +265,7 @@ KIRRI,hozki hozkamin tirri
 KONPARATU,erkatu alderatu parekatu
 KORRIKA,arrapaladan arineketan lasterka antxintxika
 KURAIA,kemena ausardia bipiltasuna garra
-LABAIN EGIN,laprast egin irrist egin lerratu labaindu irristatu
+LABAIN EGIN,laprast_egin irrist_egin lerratu labaindu irristatu
 LABAINKA,irristaka
 LAGATZEN,uzten
 LAIDOZ,irainez mespretxuz gutxiespenez
@@ -310,11 +310,11 @@ MOTEL,ahul eskas urri makal
 MOZKIN,etekin irabazi emaitza
 NABARITU,antzeman igarri sumatu
 NAGIKERIA,alferkeria utzikeria zabarkeria axolagabekeria
-NAGUSIKI,bereziki batik bat batez ere gehienbat
+NAGUSIKI,bereziki batik_bat batez_ere gehienbat
 NAHIGABE,atsekabe bihozmin samin
 NARDATUTA,aspertuta nazkatuta
 NOIZEAN BEHIN,tarteka lantzean behin noizbehinka
-NONBAIT,antza itxura agi denez sobra ere
+NONBAIT,antza itxura agi_denez sobra_ere
 NOZITU,jasan pairatu sufritu
 ODOLBILDU,odolbatu beltzune odoluri ubeldura ubelune
 OHAIDEAREKIN,maitalearekin amorantearekin ohelagunarekin
@@ -327,7 +327,7 @@ OMEN,izen entzute ospe itzal fama
 ONDIKOTZ,tamalez zoritxarrez damurik
 ONTZEKO,heltzeko umotzeko gorritzeko fruituakâ
 ONURAK,mesedeak abantailak
-ORAINTXE,egun gaur egun
+ORAINTXE,egun gaur_egun
 ORATU,heldu atxiki eutsi
 ORDAINA,baliokidea ordezkoa
 ORDAINETAN,truke trukean ordez
@@ -356,7 +356,7 @@ PREST,gertu erne pronto
 PROPIO,berenberegi espresuki apropos berariaz nahita espres
 SAIHESTU,ekidin aldendu alboratu baztertu zokoratu
 SAKELETAN,poltsikoetan patriketan
-SEMEBITXIA,seme besoetakoa
+SEMEBITXIA,seme_besoetakoa
 SENDO,tinko irmo
 SESIOA,liskarra kalapita iskanbila istilua
 SETATI,temati burugogor egoskor kaskagogor
