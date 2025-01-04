@@ -445,7 +445,8 @@ function sortuPartekatzekoTestua() {
 }
 
 function partekatuX() {
-    const testua = sortuPartekatzekoTestua();
+    const puntuak = document.getElementById('amaierako-puntuak').textContent;
+    const testua = `Sinonimoen jolasean ${puntuak} puntu lortu ditut!! 🏆 Probatu zuk ere! labur.eus/bikoteka #SinonimoenJolasa`;
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(testua)}`;
     window.open(url, '_blank');
 }
