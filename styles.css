@@ -141,19 +141,15 @@ body {
 
 .joko-eremua {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
-    padding: 0 10px;
-    max-width: 1200px;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .zutabea {
-    flex: 1;
-    min-width: 45% !important;
-    width: auto !important;
+    flex: 0 1 auto;
+    min-width: 200px;
 }
 
 .hitz-botoia {
