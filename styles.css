@@ -422,3 +422,115 @@ body {
         font-size: 0.7em;
     }
 } 
+
+.modo-aukeraketa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.botoi-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.modu-botoia {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modu-botoia:hover {
+    background-color: #45a049;
+}
+
+.entrenatu-eremua {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.entrenatu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.hitz-nagusia {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.aukera-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.aukera-botoia {
+    padding: 15px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.aukera-botoia:hover {
+    background-color: #e0e0e0;
+}
+
+.aukera-zuzena {
+    background-color: #4CAF50 !important;
+    color: white;
+}
+
+.aukera-okerra {
+    background-color: #f44336 !important;
+    color: white;
+}
+
+.jokatu-botoia {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hasiera-botoia {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hasiera-botoia:hover {
+    background-color: #1976D2;
+} 
