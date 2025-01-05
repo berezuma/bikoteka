@@ -476,7 +476,14 @@ function moduaAukeratu(modua) {
         entrenatuModuaHasi();
     } else {
         document.getElementById('joko-eremua-osoa').style.display = 'block';
-        jokoaHasi(); // Tu función existente para iniciar el juego
+        document.getElementById('modo-aukeraketa').style.display = 'none';
+        clearInterval(denboraKontagailua);
+        
+        // Iniciar el juego directamente
+        unekoMaila = 1;
+        puntuakGuztira = 0;
+        document.getElementById('uneko-puntuak').textContent = '0';
+        hasieratuMaila();
     }
 }
 
