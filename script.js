@@ -100,8 +100,14 @@ async function hasieratuJokoa() {
             throw new Error(`HTTP errorea! egoera: ${erantzuna.status}`);
         }
         const testua = await erantzuna.text();
-        console.log('CSV testua jasota:', testua.substring(0, 200) + '...'); // Erakutsi lehenengo 200 karaktereak
+        console.log('CSV testua jasota:', testua.substring(0, 200) + '...'); 
         prozesatuCSV(testua);
+        
+        // Erakutsi hasierako modu aukeraketa
+        document.getElementById('modo-aukeraketa').style.display = 'flex';
+        document.getElementById('joko-eremua-osoa').style.display = 'none';
+        document.getElementById('entrenatu-eremua').style.display = 'none';
+        
     } catch (error) {
         console.error('Errorea CSV fitxategia kargatzean:', error);
         document.body.innerHTML += `<p style="color: red">Errorea: ${error.message}</p>`;
@@ -461,6 +467,109 @@ function partekatuWhatsapp() {
     const testua = sortuPartekatzekoTestua();
     const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(testua)}`;
     window.open(url, '_blank');
+}
+
+function moduaAukeratu(modua) {
+    document.getElementById('modo-aukeraketa').style.display = 'none';
+    if (modua === 'entrenatu') {
+        document.getElementById('entrenatu-eremua').style.display = 'block';
+        entrenatuModuaHasi();
+    } else {
+        document.getElementById('joko-eremua-osoa').style.display = 'block';
+        jokoaHasi(); // Tu función existente para iniciar el juego
+    }
+}
+
+function entrenatuModuaHasi() {
+    kargatuHurrengoGaldera();
+}
+
+function kargatuHurrengoGaldera() {
+    const hitzBikotera = lortuAusazkoHitzBikotea();
+    const okerrakoBikoteak = lortuAusazkoOkerrakoBikoteak(2);
+    
+    const hitzNagusia = hitzBikotera[0].toUpperCase();
+    const erantzunZuzena = hitzBikotera[1].toUpperCase();
+    const aukerak = [...okerrakoBikoteak.map(p => p[1].toUpperCase()), erantzunZuzena]
+        .sort(() => Math.random() - 0.5);
+
+    document.getElementById('hitz-nagusia').textContent = hitzNagusia;
+    const aukeraContainer = document.getElementById('aukera-container');
+    aukeraContainer.innerHTML = '';
+    
+    aukerak.forEach(aukera => {
+        const botoia = document.createElement('button');
+        botoia.className = 'aukera-botoia';
+        botoia.textContent = aukera;
+        botoia.onclick = () => erantzunaEgiaztatu(botoia, aukera === erantzunZuzena);
+        aukeraContainer.appendChild(botoia);
+    });
+}
+
+function erantzunaEgiaztatu(botoia, zuzena) {
+    if (zuzena) {
+        const botoiak = document.getElementsByClassName('aukera-botoia');
+        Array.from(botoiak).forEach(b => b.disabled = true);
+        botoia.classList.add('aukera-zuzena');
+        setTimeout(() => {
+            kargatuHurrengoGaldera();
+        }, 1000);
+    } else {
+        botoia.classList.add('aukera-okerra');
+    }
+}
+
+function jokatuModura() {
+    document.getElementById('entrenatu-eremua').style.display = 'none';
+    document.getElementById('joko-eremua-osoa').style.display = 'block';
+    document.getElementById('modo-aukeraketa').style.display = 'none';
+    
+    // Iniciar el juego directamente
+    unekoMaila = 1;
+    puntuakGuztira = 0;
+    document.getElementById('uneko-puntuak').textContent = '0';
+    hasieratuMaila();
+}
+
+function lortuAusazkoHitzBikotea() {
+    // Aukeratu ausazko hitz bat zerrendatik
+    const ausazkoIndizea = Math.floor(Math.random() * hitzZerrenda.length);
+    const bikotea = hitzZerrenda[ausazkoIndizea];
+    
+    // Itzuli [hitza, ausazko sinonimoa] formatuan
+    return [bikotea.hitza, bikotea.erantzunak[0]];
+}
+
+function lortuAusazkoOkerrakoBikoteak(kopurua) {
+    const okerrakoBikoteak = [];
+    const erabilitakoIndizeak = new Set();
+    
+    while (okerrakoBikoteak.length < kopurua) {
+        const ausazkoIndizea = Math.floor(Math.random() * hitzZerrenda.length);
+        
+        // Ez errepikatu hitz berdinak
+        if (!erabilitakoIndizeak.has(ausazkoIndizea)) {
+            erabilitakoIndizeak.add(ausazkoIndizea);
+            const bikotea = hitzZerrenda[ausazkoIndizea];
+            okerrakoBikoteak.push([bikotea.hitza, bikotea.erantzunak[0]]);
+        }
+    }
+    
+    return okerrakoBikoteak;
+}
+
+function entrenatuModuraJoan() {
+    document.getElementById('joko-eremua-osoa').style.display = 'none';
+    document.getElementById('entrenatu-eremua').style.display = 'block';
+    clearInterval(denboraKontagailua); // Detener el contador de tiempo
+    entrenatuModuaHasi();
+}
+
+function hasieraraJoan() {
+    document.getElementById('joko-eremua-osoa').style.display = 'none';
+    document.getElementById('entrenatu-eremua').style.display = 'none';
+    document.getElementById('modo-aukeraketa').style.display = 'flex';
+    clearInterval(denboraKontagailua);
 }
 
 // Orria kargatzen denean jokoa hasi
