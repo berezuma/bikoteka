@@ -3,7 +3,7 @@ ABAILA,ziztu abiada arineketa arrapalada
 ABAILDUA,eroria goibeldua etsita lur jota
 ABEGI,harrera
 ABIATU,irten jalgi
-ADIBIDEZ,esate baterako esaterako kasu
+ADIBIDEZ,esate_baterako esaterako kasu
 ADINA,beste adinbat bezainbeste
 ADITUA,jakituna jakintsua jantzia
 ADITZEN,ulertzen konprenitzen endelegatzen
@@ -12,7 +12,7 @@ ADORERIK,kemenik indarrik
 AGERIKOA,bistakoa nabarmena ezagun
 AHOBERO,harro harroputz
 AIDURU,ain itxaroten esperoan
-AITABITXIA,ita besoetako
+AITABITXI,aita_besoetako
 AITZAKIA,estakuru
 AITZINEKOA,aurrekoa aurretikoa arteragokoa
 AITZINSOLASEAN,Sarreran hitzaurrean atarikoan
@@ -27,7 +27,7 @@ ALDARTE,umore gogaldi tenple sasoi
 ALDE,diferentzia ezberdintasun desberdintasun
 ALDENDU,apartatu urrutiratu urrundu
 ALTZOAN,magalean galtzarrean babesean
-AMABITXIA A,ma besoetako
+AMABITXI,Ama_besoetako
 AMARRUEI,maltzurkeriei azpikeriei
 AMARRURIK,azpikeriarik trikimailurik tranparik
 AMATATU,itzali desagertu iraungi
@@ -37,7 +37,7 @@ ANDANAREN,mordoaren piloaren pilaren taldearen
 ANTXETA,aio
 ANTZA,dirudienez itxuraz agi denez nonbait
 ANTZEMAN,nabaritu igarri sumatu
-APAL O,tzan umil xume
+APAL,Otzan umil xume
 APAR,bitsa haguna
 APARTA,berezia
 APETAK,grinak gutiziak desirak gurariak nahiak gogoak
@@ -47,7 +47,7 @@ ARBUIATUKO,mesprezatuko erdeinatuko gutxietsiko
 ARBUIATZEN,mesprezatzen erdeinatzen gaitzesten
 ARESTIAN,lehentxeago oraintsu oixtion
 ARGAL,mehar
-ARIANARIAN,apurkaapurka pixkanaka
+ARIANARIAN,apurka_apurka pixkanaka
 ARINDU,leundu bigundu samurtu
 ARRAS,erabat zeharo guztiz osoro
 ARTAZIAK,guraizeak aizturrak
@@ -63,7 +63,7 @@ AURKI,laster berehala
 AURRERATU,irabazi aurreztu atera
 AUSIKI,kosk haginka
 AZANTZA,astrapala zalaparta zarata harrabotsa
-AZIENDA,ganadu abere ez etxeabereak
+AZIENDA,ganadu
 AZTORATZEN,asaldatzen larritzen urduritzen kezkatzen
 AZTURAK,ohiturak usadioak usantzak ekanduak
 BADAEZPADAKO,halaholako zalantzazko halamoduzko
@@ -195,7 +195,7 @@ GORDEAN,isilpean sekretupean ezkutuan
 GORESPEN,gorapen laudorio
 GORRIAN,beltzean gogorrean
 HAGITZ,oso txit arras guztiz erabat
-HALA ERE,halere hala eta guztiz ere nolanahi ere aldiz baina ostera
+HALA ERE,halere hala_eta_guztiz_ere nolanahi_ere aldiz baina ostera
 HALABEHARRAK,zoriak patuak zorteak
 HALABER,baita_ere era_berean orobat modu berean orobat berebat horretaz gainera are_gehiago gainera
 HALAMODUZKOA,erdipurdikoa kaxkarra eskasa halaholakoa
@@ -207,7 +207,7 @@ HEGIRA,bazterrera ertzera hegalera
 HERABE,lotsati uzkur
 HERTSIRIK,itxirik
 HIGATU,gastatu ahitu
-HIGITU,mugitu zirkin egin
+HIGITU,mugitu zirkin_egin
 HITZARMENAK,itunak akordioak
 HITZONTZI,berbalapiko berritsu berbatsu hiztun mihiluze kalakari ahobero
 HIZTUN,berritsu hitzontzi eleketari kalakari
@@ -228,7 +228,7 @@ INAUSTEN,kimatzen mozten
 INDARGE,ahul eskas motel
 INGUDE,txingura
 INGURATU,ondoratu hurbildu
-INONDIK ERE,zalantza barik duda gabe
+INONDIK ERE,zalantza_barik duda_gabe
 IRAGAN,egin eman pasa igaro
 IRAUNGI,itzali amatatu desagertu emendatu
 IRAZEKI,iziotu piztu
@@ -362,7 +362,7 @@ SESIOA,liskarra kalapita iskanbila istilua
 SETATI,temati burugogor egoskor kaskagogor
 SITSAK,pipiak
 SOBERA,gehiegi larregi lar
-SO EGITEA,begiratzea behatzea
+SO_EGITEA,begiratzea behatzea
 SUHARRA,adoretsua kementsua bipila gartsua
 SUMINDUTA,haserretuta muturtuta amorratuta
 SUNDA,kiratsa usaina hatsa
