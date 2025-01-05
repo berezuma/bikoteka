@@ -7,68 +7,95 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="goiko-barra">
-        <a href="https://labur.eus/bikoteka" target="_blank" style="text-decoration: none; color: #666; position: absolute; top: 10px; left: 10px;">LABUR.EUS/BIKOTEKA</a>
-        <div class="denbora">
-            <div id="erlojua">60</div>
-            <div class="denbora-barra">
-                <div id="denbora-betea"></div>
+    <!-- Nueva pantalla de selección de modo -->
+    <div id="modo-aukeraketa" class="modo-aukeraketa">
+        <h1 class="titulua">BIKOTEKA - SINONIMOEN JOKOA</h1>
+        <div class="botoi-container">
+            <button onclick="moduaAukeratu('entrenatu')" class="modu-botoia">ENTRENATU</button>
+            <button onclick="moduaAukeratu('jokatu')" class="modu-botoia">JOKATU</button>
+        </div>
+    </div>
+
+    <!-- Nueva pantalla de entrenamiento -->
+    <div id="entrenatu-eremua" class="entrenatu-eremua" style="display: none;">
+        <div class="goiko-barra">
+            <div class="titulu-container">
+                <h1 class="titulua">AUKERATU SINONIMO ZUZENA</h1>
             </div>
+            <button id="jokatu-botoia" onclick="jokatuModura()" class="jokatu-botoia">JOKATU</button>
         </div>
-        <div class="titulu-container">
-            <h1 class="titulua">KOKATU SINONIMOAK PAREAN</h1>
-        </div>
-        <div class="puntuazioa">
-            <div id="uneko-puntuak">0</div>
-            <div>puntu</div>
+        <div class="entrenatu-container">
+            <div id="hitz-nagusia" class="hitz-nagusia"></div>
+            <div id="aukera-container" class="aukera-container"></div>
         </div>
     </div>
 
-    <div class="joko-eremua">
-        <div id="ezker-zutabea" class="zutabea"></div>
-        <div id="eskuin-zutabea" class="zutabea"></div>
-    </div>
-
-    <div class="aurrerapen-container">
-        <div class="aurrerapen-barra">
-            <div id="aurrerapen-betea"></div>
-        </div>
-        <div id="maila-info"></div>
-    </div>
-
-    <button id="egiaztatu-botoia" onclick="egiaztatu()">Egiaztatu</button>
-
-    <!-- Maila amaierako modala -->
-    <div id="maila-amaiera-modala" class="modala">
-        <div class="modal-edukia">
-            <h2>Maila amaituta!</h2>
-            <div class="puntuazio-laburpena">
-                <p>Denbora: <span id="erabilitako-denbora">0</span> segundo</p>
-                <p>Mailako puntuak: <span id="mailako-puntuak">0</span></p>
-                <p>Guztira: <span id="puntuak-guztira">0</span></p>
-            </div>
-            <button onclick="hurrengoMaila()">Hurrengo maila</button>
-        </div>
-    </div>
-
-    <!-- Gehitu joko-amaiera modala -->
-    <div id="joko-amaiera-modala" class="modala">
-        <div class="modal-edukia">
-            <h2 id="amaiera-titulua">Denbora amaitu da!</h2>
-            <div class="puntuazio-laburpena">
-                <p>Zure puntuazioa: <span id="amaierako-puntuak">0</span></p>
-            </div>
-            
-            <div class="partekatu-container">
-                <p class="partekatu-testua">Partekatu zure emaitza!</p>
-                <div class="sare-botoiak">
-                    <button onclick="partekatuX()" class="partekatu-botoia x-botoia">
-                        <img src="x.png" alt="X" class="sare-ikonoa">
-                    </button>
+    <!-- Contenido original del juego -->
+    <div id="joko-eremua-osoa" style="display: none;">
+        <div class="goiko-barra">
+            <a href="https://labur.eus/bikoteka" target="_blank" style="text-decoration: none; color: #666; position: absolute; top: 10px; left: 10px;">LABUR.EUS/BIKOTEKA</a>
+            <button onclick="hasieraraJoan()" class="hasiera-botoia">HASIERA</button>
+            <div class="denbora">
+                <div id="erlojua">60</div>
+                <div class="denbora-barra">
+                    <div id="denbora-betea"></div>
                 </div>
             </div>
-            
-            <button id="berriz-jolastu-botoia" onclick="berrizHasi()">Berriro jolastu</button>
+            <div class="titulu-container">
+                <h1 class="titulua">KOKATU SINONIMOAK PAREAN</h1>
+            </div>
+            <div class="puntuazioa">
+                <div id="uneko-puntuak">0</div>
+                <div>puntu</div>
+            </div>
+        </div>
+
+        <div class="joko-eremua">
+            <div id="ezker-zutabea" class="zutabea"></div>
+            <div id="eskuin-zutabea" class="zutabea"></div>
+        </div>
+
+        <div class="aurrerapen-container">
+            <div class="aurrerapen-barra">
+                <div id="aurrerapen-betea"></div>
+            </div>
+            <div id="maila-info"></div>
+        </div>
+
+        <button id="egiaztatu-botoia" onclick="egiaztatu()">Egiaztatu</button>
+
+        <!-- Maila amaierako modala -->
+        <div id="maila-amaiera-modala" class="modala">
+            <div class="modal-edukia">
+                <h2>Maila amaituta!</h2>
+                <div class="puntuazio-laburpena">
+                    <p>Denbora: <span id="erabilitako-denbora">0</span> segundo</p>
+                    <p>Mailako puntuak: <span id="mailako-puntuak">0</span></p>
+                    <p>Guztira: <span id="puntuak-guztira">0</span></p>
+                </div>
+                <button onclick="hurrengoMaila()">Hurrengo maila</button>
+            </div>
+        </div>
+
+        <!-- Gehitu joko-amaiera modala -->
+        <div id="joko-amaiera-modala" class="modala">
+            <div class="modal-edukia">
+                <h2 id="amaiera-titulua">Denbora amaitu da!</h2>
+                <div class="puntuazio-laburpena">
+                    <p>Zure puntuazioa: <span id="amaierako-puntuak">0</span></p>
+                </div>
+                
+                <div class="partekatu-container">
+                    <p class="partekatu-testua">Partekatu zure emaitza!</p>
+                    <div class="sare-botoiak">
+                        <button onclick="partekatuX()" class="partekatu-botoia x-botoia">
+                            <img src="x.png" alt="X" class="sare-ikonoa">
+                        </button>
+                    </div>
+                </div>
+                
+                <button id="berriz-jolastu-botoia" onclick="berrizHasi()">Berriro jolastu</button>
+            </div>
         </div>
     </div>
 
