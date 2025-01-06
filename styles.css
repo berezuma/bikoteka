@@ -368,58 +368,54 @@ body {
 @media screen and (max-width: 768px) {
     .joko-eremua {
         display: flex;
-        flex-wrap: nowrap;
-        gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
     }
     
     .zutabea {
-        flex: 0 1 48%;
-        padding: 8px;
+        flex: 0 0 50%;
+        width: 50%;
+        margin: 0;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .hitz-botoia {
-        width: 140px;
-        margin: 4px auto;
-        padding: 8px;
-        font-size: 0.8em;
+        width: auto;
+        min-width: min-content;
+        font-size: 0.75em;
+        padding: 8px 12px;
+        margin: 4px 2px;
+        display: inline-block;
     }
 
-    .titulua {
-        font-size: 1em;
+    body {
+        padding: 10px;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
 
-    .azpititulua {
-        font-size: 0.5em;
-    }
-
-    #erlojua {
-        font-size: 1.5em;
-    }
-
-    #uneko-puntuak {
-        font-size: 1.5em;
-    }
-
-    #egiaztatu-botoia {
-        padding: 12px 30px;
-        font-size: 0.7em;
+    .goiko-barra {
+        margin-bottom: 10px;
     }
 }
 
 /* Media query adicional para pantallas muy pequeñas */
 @media screen and (max-width: 360px) {
-    .joko-eremua {
-        gap: 5px;
-    }
-    
     .zutabea {
-        flex: 0 1 49%;
-        padding: 4px;
+        padding: 1px;
     }
 
     .hitz-botoia {
-        width: 120px;
-        font-size: 0.7em;
+        font-size: 0.65em;
+        padding: 6px 8px;
+        margin: 3px 1px;
     }
 } 
 
@@ -533,4 +529,111 @@ body {
 
 .hasiera-botoia:hover {
     background-color: #1976D2;
+} 
+
+/* Reglas generales para móviles */
+@media screen and (max-width: 768px) {
+    /* Ajustes para el título */
+    .titulua {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* Ajustes para los botones de modo */
+    .botoi-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .modu-botoia {
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    /* Ajustes para la zona de juego */
+    .joko-eremua {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .zutabea {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Ajustes para la barra superior */
+    .goiko-barra {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .denbora {
+        order: -1;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Ajustes para el modo entrenamiento */
+    .entrenatu-container {
+        padding: 10px;
+    }
+
+    .aukera-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Ajustes para los modales */
+    .modal-edukia {
+        width: 90%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    /* Ajustes para el footer */
+    footer {
+        position: relative;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+} 
+
+/* Mensaje de rotación */
+.rotacion-mensaje {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (orientation: portrait) and (max-width: 768px) {
+    .rotacion-mensaje {
+        display: flex;
+    }
+    
+    #app-container {
+        display: none;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .rotacion-mensaje {
+        display: none;
+    }
+    
+    #app-container {
+        display: block;
+    }
 } 
