@@ -1,7 +1,7 @@
 "BIKOTEKA" sinonimoen bideojokoa hizkuntzarekin jolasteko sortutako joko interaktiboa da. Helburua da hitzen sinonimoak identifikatzea, hiztegia hobetuz eta hitzen aberastasuna sustatuz.
 
 Nola sortu da?
-Bideojoko hau Cursor aplikazioaren adimen artifizialarekin garatu dut. Nik ez dut programazio-lerrorik idatzi; adimen artifizialak kodea sortu du nire aginduak interpretatuz. Proiektua ordu gutxitan burutu dut, programazio-esperientziarik gabe!
+Bideojoko hau Cursor aplikazioaren adimen artifizialarekin garatu dut. Nik ez dut programazio-lerrorik idatzi; adimen artifizialak kodea sortu du nire aginduak interpretatuz. Proiektua ordu gutxitan burutu dut, hori zen asmoa.
 
 Ezaugarriak
 Bi joko aukera nagusi:
