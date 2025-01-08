@@ -239,7 +239,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 #egiaztatu-botoia:hover {
@@ -536,4 +536,29 @@ body {
 
 .hasiera-botoia:hover {
     background-color: #45a049;
+} 
+
+.goiko-barra a {
+    text-decoration: none;
+    color: #666;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin-bottom: 45px;
+    padding-bottom: 30px;
+} 
+
+.blokea {
+    /* Estilos existentes */
+    touch-action: none;  /* Prevenir scroll mientras se arrastra */
+    user-select: none;   /* Prevenir selección de texto */
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    min-height: 44px;    /* Altura mínima recomendada para elementos táctiles */
+    padding: 12px;       /* Aumentar el área táctil */
+}
+
+.blokea:active {
+    transform: scale(1.02);  /* Feedback visual al tocar */
+    transition: transform 0.1s;
 } 

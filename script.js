@@ -579,5 +579,66 @@ function hasieraraJoan() {
     clearInterval(denboraKontagailua);
 }
 
+function dragStart(e) {
+    if (e.type === "touchstart") {
+        // Prevenir el scroll mientras se arrastra
+        e.preventDefault();
+    }
+    draggedItem = e.target;
+    setTimeout(() => {
+        e.target.style.opacity = '0.5';
+    }, 0);
+    
+    // Aumentar el área táctil
+    e.target.style.touchAction = 'none';
+}
+
+function dragEnd(e) {
+    setTimeout(() => {
+        draggedItem.style.opacity = '1';
+        draggedItem = null;
+    }, 0);
+}
+
+function dragOver(e) {
+    e.preventDefault();
+    // Aumentar el área de detección
+    const tolerance = 20; // pixels de tolerancia
+    const touch = e.type === 'touchmove' ? e.touches[0] : e;
+    const elements = document.elementsFromPoint(touch.clientX, touch.clientY);
+    
+    elements.forEach(element => {
+        if (element.classList.contains('blokea')) {
+            // Resaltar el área donde se puede soltar
+            element.style.background = '#e9e9e9';
+        }
+    });
+}
+
+function drop(e) {
+    e.preventDefault();
+    if (draggedItem) {
+        const dropZone = e.target.closest('.blokea');
+        if (dropZone) {
+            // Intercambiar los elementos
+            const temp = dropZone.innerHTML;
+            dropZone.innerHTML = draggedItem.innerHTML;
+            draggedItem.innerHTML = temp;
+        }
+    }
+    // Eliminar los resaltados
+    document.querySelectorAll('.blokea').forEach(bloke => {
+        bloke.style.background = '';
+    });
+}
+
+// Añadir eventos touch específicos
+document.querySelectorAll('.blokea').forEach(bloke => {
+    bloke.addEventListener('touchstart', dragStart, {passive: false});
+    bloke.addEventListener('touchend', drop);
+    bloke.addEventListener('touchmove', dragOver);
+    bloke.addEventListener('touchcancel', dragEnd);
+});
+
 // Orria kargatzen denean jokoa hasi
 window.onload = hasieratuJokoa; 
