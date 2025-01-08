@@ -550,15 +550,13 @@ body {
 
 .blokea {
     /* Estilos existentes */
-    touch-action: none;  /* Prevenir scroll mientras se arrastra */
-    user-select: none;   /* Prevenir selección de texto */
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    min-height: 44px;    /* Altura mínima recomendada para elementos táctiles */
-    padding: 12px;       /* Aumentar el área táctil */
+    touch-action: manipulation; /* Optimizado para toques rápidos */
+    cursor: pointer;
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out; /* Transición más rápida */
+    -webkit-tap-highlight-color: transparent; /* Elimina el highlight por defecto en iOS */
 }
 
 .blokea:active {
-    transform: scale(1.02);  /* Feedback visual al tocar */
-    transition: transform 0.1s;
+    transform: scale(1.05);
+    transition: transform 0.05s ease-out; /* Transición aún más rápida al tocar */
 } 

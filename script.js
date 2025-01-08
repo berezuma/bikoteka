@@ -581,23 +581,19 @@ function hasieraraJoan() {
 
 function dragStart(e) {
     if (e.type === "touchstart") {
-        // Prevenir el scroll mientras se arrastra
         e.preventDefault();
     }
     draggedItem = e.target;
-    setTimeout(() => {
-        e.target.style.opacity = '0.5';
-    }, 0);
-    
-    // Aumentar el área táctil
-    e.target.style.touchAction = 'none';
+    draggedItem.style.opacity = '0.5';
+    draggedItem.style.transform = 'scale(1.05)';
 }
 
 function dragEnd(e) {
-    setTimeout(() => {
+    if (draggedItem) {
         draggedItem.style.opacity = '1';
+        draggedItem.style.transform = 'scale(1)';
         draggedItem = null;
-    }, 0);
+    }
 }
 
 function dragOver(e) {
